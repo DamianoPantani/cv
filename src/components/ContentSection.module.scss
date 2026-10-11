@@ -1,0 +1,41 @@
+.contentSection {
+  @include flexColumn(lg);
+}
+
+.content {
+  @include flexColumn(xs);
+
+  text-align: justify;
+}
+
+.title {
+  @include flexRow(sm);
+
+  h1 {
+    position: relative;
+    flex: 1;
+  }
+
+  .icon {
+    border-radius: 50%;
+    padding: $space2;
+    background-color: $primaryColor;
+    color: $darkest;
+
+    @include center;
+
+    svg {
+      width: $space6;
+    }
+  }
+}
+
+.text {
+  width: 100%;
+  height: stretch;
+
+  @include flexColumn(xs);
+
+  justify-content: space-between;
+  gap: 0;
+}

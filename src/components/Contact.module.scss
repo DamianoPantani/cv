@@ -1,0 +1,11 @@
+.content {
+  @include flexColumn(md);
+}
+
+.contactItem {
+  @include flexColumn(xs);
+}
+
+.header {
+  color: $primaryColor;
+}

@@ -1,0 +1,118 @@
+body {
+  text-size-adjust: 100%;
+  font-family: "Century Gothic", Calibri, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  -moz-osx-font-smoothing: grayscale;
+  touch-action: manipulation;
+  font-feature-settings: "kern";
+  background-color: $lightest;
+  color: $darkest;
+
+  // Simulate A4 paper - add tiny offset to fix white outline when generating PDF
+  width: calc(21cm + 0.2cm);
+  height: calc(29.7cm + 0.27cm);
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: normal;
+  overflow-wrap: anywhere;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.25em;
+}
+
+svg {
+  fill: currentcolor;
+  width: 1em;
+  aspect-ratio: 1;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: $primaryColor;
+}
+
+/* stylelint-disable-next-line selector-max-id */
+:global(#root) {
+  height: 100%;
+}
+
+.info {
+  flex: 1;
+}
+
+.resume {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  background-color: $lightest;
+  height: 100%;
+
+  header,
+  .info {
+    padding: $space16 $sizeLG;
+  }
+
+  aside {
+    display: flex;
+    flex-direction: column;
+    background-color: $secondaryColor;
+    color: $lightest;
+    font-size: 0.9em;
+
+    h1 {
+      color: $primaryColor;
+    }
+  }
+
+  header {
+    position: relative; //for avatar
+    background-color: $primaryColor;
+    text-align: center;
+
+    h1 {
+      color: $secondaryColor;
+    }
+
+    h2 {
+      color: $lightest;
+    }
+  }
+
+  main {
+    padding: $sizeLG;
+
+    @include flexColumn(lg);
+  }
+
+  article {
+    @include flexColumn(lg);
+
+    gap: $space7;
+
+    section {
+      @include flexColumn(lg);
+
+      gap: $space7;
+    }
+  }
+}

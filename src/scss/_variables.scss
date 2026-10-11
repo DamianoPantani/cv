@@ -1,0 +1,58 @@
+@use "sass:map";
+
+$primaryColor: #14acca;
+$secondaryColor: #323e4f;
+$secondaryColorAlt: #222a35;
+
+$lightest: #fcfcfc;
+$lighter: #dddddd;
+$light: #aaaaaa;
+$dark: #666666;
+$darker: #444444;
+$darkest: #222222;
+
+$space0: 2px;
+$space1: 4px;
+$space2: 8px;
+$space3: 12px;
+$space4: 16px;
+$space5: 20px;
+$space6: 24px;
+$space7: 28px;
+$space8: 32px;
+$space9: 36px;
+$space10: 40px;
+$space12: 48px;
+$space14: 56px;
+$space16: 64px;
+$space20: 80px;
+
+$sizeXS: $space1;
+$sizeSM: $space2;
+$sizeMD: $space4;
+$sizeLG: $space10;
+
+$gaps: (
+  "xs": $sizeXS,
+  "sm": $sizeSM,
+  "md": $sizeMD,
+  "lg": $sizeLG,
+);
+
+@mixin flexColumn($gap: sm, $align: null) {
+  display: flex;
+  flex-direction: column;
+  align-items: $align;
+  gap: map.get($gaps, $gap);
+}
+
+@mixin flexRow($gap: sm, $justify: null) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify;
+  gap: map.get($gaps, $gap);
+}
+
+@mixin center {
+  @include flexRow(null, center);
+}

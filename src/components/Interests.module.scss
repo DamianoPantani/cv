@@ -1,0 +1,12 @@
+.interests {
+  li {
+    display: grid;
+    grid-template-columns: $space7 1fr;
+    align-items: center;
+    gap: $sizeSM;
+  }
+
+  svg {
+    width: 100%;
+  }
+}

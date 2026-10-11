@@ -1,0 +1,9 @@
+export { ReactComponent as Bicycle } from "./bicycle.svg";
+export { ReactComponent as Briefcase } from "./briefcase.svg";
+export { ReactComponent as GraduationCap } from "./graduationCap.svg";
+export { ReactComponent as Heart } from "./heart.svg";
+export { ReactComponent as Helmet } from "./helmet.svg";
+export { ReactComponent as Knight } from "./knight.svg";
+export { ReactComponent as Phone } from "./phone.svg";
+export { ReactComponent as Profile } from "./profile.svg";
+export { ReactComponent as Lightbulb } from "./lightbulb.svg";

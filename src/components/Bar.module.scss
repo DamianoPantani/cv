@@ -1,0 +1,28 @@
+.bar {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: var(--width);
+    height: 100%;
+    background-color: $primaryColor;
+  }
+
+  &,
+  &::after {
+    border-radius: 5px;
+  }
+}
+
+.light {
+  background-color: $lighter;
+}
+
+.dark {
+  background-color: $secondaryColorAlt;
+}

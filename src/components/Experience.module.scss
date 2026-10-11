@@ -1,0 +1,61 @@
+.timeline {
+  position: relative;
+  padding-left: 50px;
+
+  @include flexColumn(md);
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 4px;
+    bottom: 0;
+    width: 6px;
+    transform: translateX(-50%);
+    background-color: $lighter;
+  }
+}
+
+.job {
+  position: relative;
+
+  @include flexColumn(md);
+
+  &::before {
+    top: 4px;
+    background-color: $primaryColor;
+  }
+}
+
+.job::before,
+.project::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  position: absolute;
+  left: -39px;
+}
+
+.date {
+  color: $light;
+}
+
+.jobInfo {
+  @include flexColumn(xs);
+}
+
+.projects {
+  @include flexColumn(md);
+}
+
+.project {
+  position: relative;
+
+  @include flexColumn(xs);
+
+  &::before {
+    top: 0;
+    background-color: $lighter;
+  }
+}

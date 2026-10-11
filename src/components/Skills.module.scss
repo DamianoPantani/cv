@@ -1,0 +1,21 @@
+.content {
+  @include flexColumn(xs);
+
+  li {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $sizeXS;
+  }
+}
+
+.skillLevel {
+  @include flexColumn(xs);
+}
+
+.progress {
+  @include flexRow(xs);
+}
+
+.levelName {
+  font-size: 0.75em;
+}
